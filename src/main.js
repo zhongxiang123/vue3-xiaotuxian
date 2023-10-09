@@ -5,7 +5,11 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
-
+//测试接口文件
+import { getCategoryAPI } from "@/apis/testAPI"
+getCategoryAPI().then(res => {
+    console.log(res);
+})
 const app = createApp(App)
 
 app.use(createPinia())
