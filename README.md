@@ -1,5 +1,5 @@
 # vue-project
-
+这是一个vue小兔仙项目
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
