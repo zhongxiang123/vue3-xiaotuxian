@@ -15,8 +15,6 @@ onMounted(()=>getBanner())
 
 </script>
 
-
-
 <template>
   <div class="home-banner">
     <el-carousel height="500px">
@@ -26,8 +24,6 @@ onMounted(()=>getBanner())
     </el-carousel>
   </div>
 </template>
-
-
 
 <style scoped lang='scss'>
 .home-banner {
