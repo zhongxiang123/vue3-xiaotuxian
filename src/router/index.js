@@ -32,7 +32,13 @@ const router = createRouter({
       path: '/Login',
       component:Login
     },
-   ]
+  ],
+  //路由滚动行为
+  scrollBehavior() {
+    return {
+      top:0
+    }
+  }
 })
 
 export default router
