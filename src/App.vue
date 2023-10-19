@@ -6,7 +6,7 @@
   <!-- <el-button type="primary">i am button</el-button> -->
   <router-view></router-view>
   <div class="test">
-    test scss
+    
   </div>
 </template>
 
