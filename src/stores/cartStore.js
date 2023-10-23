@@ -32,16 +32,27 @@ export const useCartStore = defineStore(
       cartList.value.splice(idx, 1);
     };
 
+    // 单选功能
+    const singleCheck = (skuId, selected) => {
+      const item = cartList.value.find((item) => item.skuId === skuId);
+      item.selected = selected;
+    };
+
     //   4.计算属性
-    const allCount = computed(() => cartList.value.reduce((a, c) => a + c.count, 0));
-    const allPrice = computed(() => cartList.value.reduce((a, c) => a + c.count*c.price, 0));
+    const allCount = computed(() =>
+      cartList.value.reduce((a, c) => a + c.count, 0)
+    );
+    const allPrice = computed(() =>
+      cartList.value.reduce((a, c) => a + c.count * c.price, 0)
+    );
 
     return {
       cartList,
       addCart,
-        delCart,
-        allCount,
-      allPrice
+      delCart,
+      allCount,
+      allPrice,
+      singleCheck,
     };
   },
   {
