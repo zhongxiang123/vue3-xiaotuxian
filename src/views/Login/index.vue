@@ -2,10 +2,9 @@
 import { ElMessage } from "element-plus";
 import "element-plus/theme-chalk/el-message.css";
 import { useRouter } from "vue-router";
-import {useUserStore} from '@/stores/user'
+import { useUserStore } from "@/stores/user";
 
-
-const userStore=useUserStore()
+const userStore = useUserStore();
 // 表单校验（账户名+密码）
 import { ref } from "vue";
 // 1.准备表单对象
@@ -62,7 +61,7 @@ const doLogin = () => {
     console.log(valid);
     //判断valid
     if (valid) {
-      await userStore.getUserInfo({ account, password })
+      await userStore.getUserInfo({ account, password });
       // 1.提示用户登录成功
       ElMessage({ type: "success", message: "登录成功" });
       // 2.跳转首页
@@ -366,3 +365,4 @@ const doLogin = () => {
   color: #fff;
 }
 </style>
+@/stores/userStore @/stores/userStore

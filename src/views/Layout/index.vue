@@ -19,3 +19,4 @@ onMounted(() => categoryStore.getCategory());
   <RouterView />
   <LayoutFooter />
 </template>
+@/stores/categoryStore @/stores/categoryStore

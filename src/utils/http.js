@@ -29,7 +29,7 @@ httpInstance.interceptors.request.use(
 httpInstance.interceptors.response.use(
   (res) => res.data,
   (e) => {
-        const userStore = useUserStore();
+    const userStore = useUserStore();
 
     // 统一错误提示
     ElMessage({
@@ -37,10 +37,9 @@ httpInstance.interceptors.response.use(
       message: e.response.data.message,
     });
     if (e.response.status === 401) {
-      userStore.clearUserInfo()
-      router.push('/login')
+      userStore.clearUserInfo();
+      router.push("/login");
     }
-
 
     return Promise.reject(e);
   }

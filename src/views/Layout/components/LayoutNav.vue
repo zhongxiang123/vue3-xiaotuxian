@@ -1,9 +1,9 @@
 <script setup>
 import { useUserStore } from "@/stores/user";
-import { useRouter } from 'vue-router'
+import { useRouter } from "vue-router";
 
 const userStore = useUserStore();
-const router = useRouter()
+const router = useRouter();
 
 const confirm = () => {
   console.log("用户要退出登录了");
@@ -88,3 +88,4 @@ const confirm = () => {
   }
 }
 </style>
+@/stores/userStore @/stores/userStore
