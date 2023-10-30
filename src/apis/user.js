@@ -1,5 +1,5 @@
 // 封装所有和用户相关的接口函数
-import request from '@/utils/http'
+import request from "@/utils/http";
 export const loginAPI = ({ account, password }) => {
   return request({
     url: "/login",
@@ -7,6 +7,15 @@ export const loginAPI = ({ account, password }) => {
     data: {
       account,
       password,
+    },
+  });
+};
+
+export const getLikeListAPI = ({ limit = 4 }) => {
+  return request({
+    url: "/goods/relevant",
+    params: {
+      limit,
     },
   });
 };
